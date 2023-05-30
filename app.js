@@ -5,7 +5,7 @@ const conn = require("./config/db");
 app.use(express.json())
 
 app.get('/get-animals', function (req, res) {
-    const queryStr = 'SELECT * FROM animals WHERE deleted_at IS NULL';
+    const queryStr = 'SELECT id, name, description FROM animals WHERE deleted_at IS NULL';
     conn.query(queryStr, (err, results) => {
       if (err) {
         res.error(err.sqlMessage, res);
@@ -22,7 +22,7 @@ app.get('/get-animals', function (req, res) {
   app.get('/get-animal-by-id', function (req, res) {
     const param = req.query;
     const id = param.id;
-    const queryStr = 'SELECT * FROM animals WHERE id = ? AND deleted_at IS NULL';
+    const queryStr = 'SELECT id, name, description FROM animals WHERE id = ? AND deleted_at IS NULL';
     const values = [id];
     conn.query(queryStr, values, (err, results) => {
       if (err) {
