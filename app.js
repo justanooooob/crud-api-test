@@ -112,8 +112,9 @@ conn.query(queryStr, values, (err, results) => {
     const param = req.body;
     const name = param.name;
     const description = param.description;
-    const queryStr = 'INSERT INTO animals (name, description, price) VALUES (?, ?)';
-    const values = [name, description];
+    const price = param.price;
+    const queryStr = 'INSERT INTO animals (name, description, price) VALUES (?, ?, ?)';
+    const values = [name, description, price];
   
     conn.query(queryStr, values, (err, results) => {
       if (err) {
@@ -139,10 +140,11 @@ conn.query(queryStr, values, (err, results) => {
     const id = param.id;
     const name = param.name;
     const description = param.description;
+    const price = param.price;
     const now = new Date();
 
-    const queryStr = 'UPDATE animals SET name = ?, description = ?, updated_at = ? WHERE id = ? AND deleted_at IS NULL';
-    const values = [name, description, now, id];
+    const queryStr = 'UPDATE animals SET name = ?, description = ?, price = ?, updated_at = ? WHERE id = ? AND deleted_at IS NULL';
+    const values = [name, description, price, now, id];
 
     conn.query(queryStr, values, (err, results) => {
       if (err) {
