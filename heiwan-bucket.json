@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "heiwan-app-project",
+  "private_key_id": "4f3f7f3b2f5c303cc0c390c5ca9e59206d05972d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC0JaO89Mo7u6Zi\nMehH8eEZa53cjL6BT4PeMG4B6gc6XyWbqpcv7Nh/aBSgFZpHPtKxPk1Tl6kuW2q+\nvgocznFge4oyTAxv7Xhf7My734GbK7rgud5+uSUnYqFYJJN2WZj2c7nnIDleSK++\n3bmWnNn15yw2wXFUGk0A156HDpZmT35kSz7LTstQyGkQ/5/veV/Ti9j4U7hq4vZv\n1BZgmhZvZ1434LKaq2mBo01lRjCTWkkQQDHJvAZlCSNYdXCOoaD+UrtNvL2RxJda\n9nxXSHf15xsiZYaxru+lzILA19BJ6XNBgbRp2bstV0B+UNlW5hz1Yj3dBREIk+hf\ntqI87TVXAgMBAAECggEAA70iPv+KRkoYjmzVvXnY1PkQT4MA8y3DdrQ6Ruzkqy1N\nWlk527ib160WfH9mR83se9mSAPGir7/IS97QK+qMR4HY4Olberk1fdwsIEa9FGDd\nzIs0VxygQkcq7RQ5QUQOcihTC+fLI6342R/Amc515u4eKKFu04gw3/BvAwOQ/dzl\n2PuhcvXALlQkS7VpYWdT/sQN/fVeydLLJaZYG+7vA8CCJBUQyLtLPp3DFLJD39Oi\nslpASVdIxbXoj4wIageswuIk+n26llPI4YhxB2tW4E4joA+EadHntcqPaH/Zd8VQ\nIY05WStn8OAMaxeWjEMPo/jyo91jZQ7m+7I1mkROzQKBgQDzmnbGRQsQQxjbLXhE\nB5GgEOu7BMoO9Tcauap0vioErZZposlVOADIDrEjsIMkutX4lJRb89N9GKhMUFdH\nx0lBxrR06VPacBeMH25qExG9O+mmK33DPYOCT7nwNtXsONaFnO9Bqh8t+yshdSHI\n3kPQ2u1B5gM/zzJrY1rBx573dQKBgQC9UH/570fgTfZUexg7+dccf/Uj8LWIHBEf\nOkoMnMCCLdB5QUQ/RzxPuBTR0Z5k8mzwt3hFNWGhK8COvDgjz4QDg/zIlAUOqSZu\n1MUKWztZBGTMagh0X1/+0ZU/jsIf3Ts5ZHNJXL5zq/KZOMzio26GoYuce4DPyo/f\n734rVv0sGwKBgDeP769haBiZdT3orRm3MDv2IA5UFVI8FAmAd6SRCzxt63TEsG9D\nisoWr8iYJhFmnA9KtFwUzRQnX5uoZ3/zsH3UOKzB22JjVrubH7AKEW28EJraKKEz\nkp9SV/K2TyzF+ggXt2qexuXR+BB1ivMp3wXwKVVyhSM0uydLThQM1/FRAoGBALQU\nUufoGLLg9iQ+Qzsp2NkfTow1eDhUmmTeCXod0XEDK39r+gNHO7OJIyTDBKx5fe8s\nVpdew9OPzsb3e191EdpWPqp9QqJDfG+IrTXAup9ecpOPeSNZZfL6YcHnhfjRdHiP\neKqcMf3N3iKpyRr84zHlkOv0/v6pbFpTcey//mtpAoGBAKcdvCZJBDpBdTd4Uw/y\njKpZPtgpqtp/GmjO1OwkNWHgc95mKbLtkcT3obLIrej33fV7ax0UAr8kprP4HiB6\nyu8eTokbFAzdIChWIpw0pgMt9ZBC43ENSu70+BiLuQC3rUFVlqfuBfUrn0qNT6uO\ntZiCGrO6KhItCQMIR8ACOvSa\n-----END PRIVATE KEY-----\n",
+  "client_email": "photo-sharing-admin@heiwan-app-project.iam.gserviceaccount.com",
+  "client_id": "105832767044652096691",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/photo-sharing-admin%40heiwan-app-project.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

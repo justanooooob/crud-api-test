@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "heiwan",
+    "password": "heiwan123",
+    "database": "heiwan",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "heiwan",
+    "password": "heiwan123",
+    "database": "heiwan",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "heiwan",
+    "password": "heiwan123",
+    "database": "heiwan",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
