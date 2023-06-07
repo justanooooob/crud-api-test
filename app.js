@@ -12,7 +12,6 @@ const { getPixels } = require('ndarray-pixels');
 const conn = require("./config/db");
 const { upload } = require('./config/bucket');
 const { animals } = require('./models');
-const update_experimental =  require('./update_experimental')
 
 
 
@@ -326,7 +325,7 @@ app.post('/pred', async (req, res) => {
     }
 
     // Check the file type
-    const allowedFileTypes = ['image/jpg'];
+    const allowedFileTypes = ['image/jpeg', 'image/png', 'image/jpg'];
     if (!allowedFileTypes.includes(file.mimetype)) {
       res.status(400).json({ error: 'Invalid file type. Only JPG are allowed.' });
       return;
