@@ -349,7 +349,7 @@ app.post('/pred', async (req, res) => {
   fs.writeFileSync(downloadedFilePath, Buffer.from(imageData, 'binary'));
 
   // python goes here
-  const pythonScriptPath = '/var/www/Heiwan/pred3.py';
+  const pythonScriptPath = '/var/www/Heiwan/pred2.py';
   const command = `python3 ${pythonScriptPath} "${downloadedFilePath}"`;
 
   exec(command, (error, stdout, stderr) => {
