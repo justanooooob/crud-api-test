@@ -3,6 +3,11 @@ import numpy as np
 import cv2
 from PIL import Image
 import json
+import sys
+
+url = sys.argv[1]
+
+
 
 def preprocess(image, mean=0.5, std=0.5, shape=(299, 299)):
     """Scale, normalize and resize images."""
@@ -34,7 +39,11 @@ def predict_labels():
 
 
     # Load and preprocess the image
-    image = cv2.imread('/var/www/Heiwan/downloads/downloaded.jpg')
+    image = cv2.imread(url)
+    if image is None:
+        print("Failed to load the image")
+        sys.exit(1)
+        
     preprocess_img = preprocess(image)
     # Perform any necessary preprocessing steps on the image
 

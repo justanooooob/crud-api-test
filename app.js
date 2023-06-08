@@ -337,20 +337,43 @@ app.post('/pred', async (req, res) => {
   // const imageUrl = imagePath;
   const resize_response = await axios.get(url, { responseType: 'arraybuffer' });
   const imageData = resize_response.data;
+  const imageName = url.substring(url.lastIndexOf('/') + 1);
+  const filePath = '/var/www/Heiwan/downloads/';
+  const downloadedFilePath = filePath + imageName;
+  console.log(imageName);
+  console.log(filePath);
+  console.log(downloadedFilePath);
 
   // Save the downloaded image locally
-  const downloadedImagePath = '/var/www/Heiwan/downloads/downloaded.jpg';
-  fs.writeFileSync(downloadedImagePath, Buffer.from(imageData, 'binary'));
+  // const downloadedImagePath = '/var/www/Heiwan/downloads/downloaded.jpg';
+  fs.writeFileSync(downloadedFilePath, Buffer.from(imageData, 'binary'));
 
   // python goes here
-  exec('python3 /var/www/Heiwan/pred.py', (error, stdout, stderr) => {
+  const pythonScriptPath = '/var/www/Heiwan/pred3.py';
+  const command = `python3 ${pythonScriptPath} "${downloadedFilePath}"`;
+
+  exec(command, (error, stdout, stderr) => {
     if (error) {
       console.error('Python script execution error:', error);
       res.status(500).json({ error: 'Python script execution failed.' });
     } else {
       try {
         const outputJson = JSON.parse(stdout);
-        res.json(outputJson);
+        res.status(500).json({
+          "success" : true,
+          "message" : "Prediksi Sukses",
+          "data" : outputJson
+        });
+
+        fs.unlink(downloadedFilePath, (err) => {
+          if (err) {
+            console.error('Error deleting file:', err);
+            // Handle the error accordingly
+          } else {
+            console.log('File deleted successfully');
+            // File deletion successful, proceed with other tasks or send a success response
+          }
+        });
       } catch (parseError) {
         console.error('Error parsing Python script output:', parseError);
         console.log(stdout)
@@ -358,6 +381,7 @@ app.post('/pred', async (req, res) => {
       }
     }
   });
+  
   } catch (error) {
     console.error('Error:', error);
     res.status(500).json({ error: 'An error occurred' });
