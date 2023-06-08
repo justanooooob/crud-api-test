@@ -1,5 +1,5 @@
 const { Storage } = require('@google-cloud/storage');
-const credFilename = 'heiwan-bucket.json'
+const credFilename = 'bucket.json'
 const bucketName = 'heiwan-photo-bucket' 
 
 
